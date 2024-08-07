@@ -4,7 +4,146 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e858cbbe-cc00-49a2-83b0-18149e6db3bf" name="更改" comment="" />
+    <list default="true" id="e858cbbe-cc00-49a2-83b0-18149e6db3bf" name="更改" comment="测试环境添加">
+      <change afterPath="$PROJECT_DIR$/debug-sandbox/config/Console/AutoLogin.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/debug-sandbox/config/Console/Command.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/debug-sandbox/config/Console/Logger.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/debug-sandbox/config/Console/PermissionService.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/debug-sandbox/config/Console/PluginDependencies.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/debug-sandbox/config/com.luckj.bigame/bigame.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/debug-sandbox/data/Console/console-secrets.key" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/debug-sandbox/plugin-libraries/com/squareup/okhttp3/okhttp/4.9.3/_remote.repositories" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/debug-sandbox/plugin-libraries/com/squareup/okhttp3/okhttp/4.9.3/okhttp-4.9.3.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/debug-sandbox/plugin-libraries/com/squareup/okhttp3/okhttp/4.9.3/okhttp-4.9.3.jar.sha1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/debug-sandbox/plugin-libraries/com/squareup/okhttp3/okhttp/4.9.3/okhttp-4.9.3.pom" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/debug-sandbox/plugin-libraries/com/squareup/okhttp3/okhttp/4.9.3/okhttp-4.9.3.pom.sha1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/debug-sandbox/plugin-libraries/io/ktor/ktor-client-core-jvm/1.6.8/_remote.repositories" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/debug-sandbox/plugin-libraries/io/ktor/ktor-client-core-jvm/1.6.8/ktor-client-core-jvm-1.6.8.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/debug-sandbox/plugin-libraries/io/ktor/ktor-client-core-jvm/1.6.8/ktor-client-core-jvm-1.6.8.jar.sha1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/debug-sandbox/plugin-libraries/io/ktor/ktor-client-core-jvm/1.6.8/ktor-client-core-jvm-1.6.8.pom" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/debug-sandbox/plugin-libraries/io/ktor/ktor-client-core-jvm/1.6.8/ktor-client-core-jvm-1.6.8.pom.sha1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/debug-sandbox/plugin-libraries/io/ktor/ktor-client-core/1.6.8/_remote.repositories" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/debug-sandbox/plugin-libraries/io/ktor/ktor-client-core/1.6.8/ktor-client-core-1.6.8.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/debug-sandbox/plugin-libraries/io/ktor/ktor-client-core/1.6.8/ktor-client-core-1.6.8.jar.sha1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/debug-sandbox/plugin-libraries/io/ktor/ktor-client-core/1.6.8/ktor-client-core-1.6.8.pom" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/debug-sandbox/plugin-libraries/io/ktor/ktor-client-core/1.6.8/ktor-client-core-1.6.8.pom.sha1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/debug-sandbox/plugin-libraries/io/ktor/ktor-client-okhttp/1.6.8/_remote.repositories" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/debug-sandbox/plugin-libraries/io/ktor/ktor-client-okhttp/1.6.8/ktor-client-okhttp-1.6.8.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/debug-sandbox/plugin-libraries/io/ktor/ktor-client-okhttp/1.6.8/ktor-client-okhttp-1.6.8.jar.sha1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/debug-sandbox/plugin-libraries/io/ktor/ktor-client-okhttp/1.6.8/ktor-client-okhttp-1.6.8.pom" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/debug-sandbox/plugin-libraries/io/ktor/ktor-client-okhttp/1.6.8/ktor-client-okhttp-1.6.8.pom.sha1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/debug-sandbox/plugin-libraries/io/ktor/ktor-http-cio-jvm/1.6.8/_remote.repositories" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/debug-sandbox/plugin-libraries/io/ktor/ktor-http-cio-jvm/1.6.8/ktor-http-cio-jvm-1.6.8.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/debug-sandbox/plugin-libraries/io/ktor/ktor-http-cio-jvm/1.6.8/ktor-http-cio-jvm-1.6.8.jar.sha1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/debug-sandbox/plugin-libraries/io/ktor/ktor-http-cio-jvm/1.6.8/ktor-http-cio-jvm-1.6.8.pom" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/debug-sandbox/plugin-libraries/io/ktor/ktor-http-cio-jvm/1.6.8/ktor-http-cio-jvm-1.6.8.pom.sha1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/debug-sandbox/plugin-libraries/io/ktor/ktor-http-cio/1.6.8/_remote.repositories" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/debug-sandbox/plugin-libraries/io/ktor/ktor-http-cio/1.6.8/ktor-http-cio-1.6.8.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/debug-sandbox/plugin-libraries/io/ktor/ktor-http-cio/1.6.8/ktor-http-cio-1.6.8.jar.sha1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/debug-sandbox/plugin-libraries/io/ktor/ktor-http-cio/1.6.8/ktor-http-cio-1.6.8.pom" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/debug-sandbox/plugin-libraries/io/ktor/ktor-http-cio/1.6.8/ktor-http-cio-1.6.8.pom.sha1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/debug-sandbox/plugin-libraries/io/ktor/ktor-http-jvm/1.6.8/_remote.repositories" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/debug-sandbox/plugin-libraries/io/ktor/ktor-http-jvm/1.6.8/ktor-http-jvm-1.6.8.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/debug-sandbox/plugin-libraries/io/ktor/ktor-http-jvm/1.6.8/ktor-http-jvm-1.6.8.jar.sha1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/debug-sandbox/plugin-libraries/io/ktor/ktor-http-jvm/1.6.8/ktor-http-jvm-1.6.8.pom" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/debug-sandbox/plugin-libraries/io/ktor/ktor-http-jvm/1.6.8/ktor-http-jvm-1.6.8.pom.sha1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/debug-sandbox/plugin-libraries/io/ktor/ktor-http/1.6.8/_remote.repositories" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/debug-sandbox/plugin-libraries/io/ktor/ktor-http/1.6.8/ktor-http-1.6.8.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/debug-sandbox/plugin-libraries/io/ktor/ktor-http/1.6.8/ktor-http-1.6.8.jar.sha1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/debug-sandbox/plugin-libraries/io/ktor/ktor-http/1.6.8/ktor-http-1.6.8.pom" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/debug-sandbox/plugin-libraries/io/ktor/ktor-http/1.6.8/ktor-http-1.6.8.pom.sha1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/debug-sandbox/plugin-libraries/io/ktor/ktor-io-jvm/1.6.8/_remote.repositories" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/debug-sandbox/plugin-libraries/io/ktor/ktor-io-jvm/1.6.8/ktor-io-jvm-1.6.8.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/debug-sandbox/plugin-libraries/io/ktor/ktor-io-jvm/1.6.8/ktor-io-jvm-1.6.8.jar.sha1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/debug-sandbox/plugin-libraries/io/ktor/ktor-io-jvm/1.6.8/ktor-io-jvm-1.6.8.pom" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/debug-sandbox/plugin-libraries/io/ktor/ktor-io-jvm/1.6.8/ktor-io-jvm-1.6.8.pom.sha1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/debug-sandbox/plugin-libraries/io/ktor/ktor-io/1.6.8/_remote.repositories" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/debug-sandbox/plugin-libraries/io/ktor/ktor-io/1.6.8/ktor-io-1.6.8.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/debug-sandbox/plugin-libraries/io/ktor/ktor-io/1.6.8/ktor-io-1.6.8.jar.sha1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/debug-sandbox/plugin-libraries/io/ktor/ktor-io/1.6.8/ktor-io-1.6.8.pom" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/debug-sandbox/plugin-libraries/io/ktor/ktor-io/1.6.8/ktor-io-1.6.8.pom.sha1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/debug-sandbox/plugin-libraries/io/ktor/ktor-network-jvm/1.6.8/_remote.repositories" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/debug-sandbox/plugin-libraries/io/ktor/ktor-network-jvm/1.6.8/ktor-network-jvm-1.6.8.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/debug-sandbox/plugin-libraries/io/ktor/ktor-network-jvm/1.6.8/ktor-network-jvm-1.6.8.jar.sha1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/debug-sandbox/plugin-libraries/io/ktor/ktor-network-jvm/1.6.8/ktor-network-jvm-1.6.8.pom" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/debug-sandbox/plugin-libraries/io/ktor/ktor-network-jvm/1.6.8/ktor-network-jvm-1.6.8.pom.sha1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/debug-sandbox/plugin-libraries/io/ktor/ktor-utils-jvm/1.6.8/_remote.repositories" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/debug-sandbox/plugin-libraries/io/ktor/ktor-utils-jvm/1.6.8/ktor-utils-jvm-1.6.8.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/debug-sandbox/plugin-libraries/io/ktor/ktor-utils-jvm/1.6.8/ktor-utils-jvm-1.6.8.jar.sha1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/debug-sandbox/plugin-libraries/io/ktor/ktor-utils-jvm/1.6.8/ktor-utils-jvm-1.6.8.pom" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/debug-sandbox/plugin-libraries/io/ktor/ktor-utils-jvm/1.6.8/ktor-utils-jvm-1.6.8.pom.sha1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/debug-sandbox/plugin-libraries/io/ktor/ktor-utils/1.6.8/_remote.repositories" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/debug-sandbox/plugin-libraries/io/ktor/ktor-utils/1.6.8/ktor-utils-1.6.8.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/debug-sandbox/plugin-libraries/io/ktor/ktor-utils/1.6.8/ktor-utils-1.6.8.jar.sha1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/debug-sandbox/plugin-libraries/io/ktor/ktor-utils/1.6.8/ktor-utils-1.6.8.pom" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/debug-sandbox/plugin-libraries/io/ktor/ktor-utils/1.6.8/ktor-utils-1.6.8.pom.sha1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/debug-sandbox/plugin-libraries/org/jetbrains/kotlin/kotlin-stdlib-common/1.4.0/_remote.repositories" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/debug-sandbox/plugin-libraries/org/jetbrains/kotlin/kotlin-stdlib-common/1.4.0/kotlin-stdlib-common-1.4.0.pom" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/debug-sandbox/plugin-libraries/org/jetbrains/kotlin/kotlin-stdlib-common/1.4.0/kotlin-stdlib-common-1.4.0.pom.sha1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/debug-sandbox/plugin-libraries/org/jetbrains/kotlin/kotlin-stdlib-common/1.4.10/_remote.repositories" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/debug-sandbox/plugin-libraries/org/jetbrains/kotlin/kotlin-stdlib-common/1.4.10/kotlin-stdlib-common-1.4.10.pom" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/debug-sandbox/plugin-libraries/org/jetbrains/kotlin/kotlin-stdlib-common/1.4.10/kotlin-stdlib-common-1.4.10.pom.sha1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/debug-sandbox/plugin-libraries/org/jetbrains/kotlin/kotlin-stdlib-common/1.5.30/_remote.repositories" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/debug-sandbox/plugin-libraries/org/jetbrains/kotlin/kotlin-stdlib-common/1.5.30/kotlin-stdlib-common-1.5.30.pom" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/debug-sandbox/plugin-libraries/org/jetbrains/kotlin/kotlin-stdlib-common/1.5.30/kotlin-stdlib-common-1.5.30.pom.sha1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/debug-sandbox/plugin-libraries/org/jetbrains/kotlin/kotlin-stdlib-jdk7/1.5.30/_remote.repositories" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/debug-sandbox/plugin-libraries/org/jetbrains/kotlin/kotlin-stdlib-jdk7/1.5.30/kotlin-stdlib-jdk7-1.5.30.pom" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/debug-sandbox/plugin-libraries/org/jetbrains/kotlin/kotlin-stdlib-jdk7/1.5.30/kotlin-stdlib-jdk7-1.5.30.pom.sha1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/debug-sandbox/plugin-libraries/org/jetbrains/kotlin/kotlin-stdlib-jdk7/1.6.10/_remote.repositories" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/debug-sandbox/plugin-libraries/org/jetbrains/kotlin/kotlin-stdlib-jdk7/1.6.10/kotlin-stdlib-jdk7-1.6.10.pom" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/debug-sandbox/plugin-libraries/org/jetbrains/kotlin/kotlin-stdlib-jdk7/1.6.10/kotlin-stdlib-jdk7-1.6.10.pom.sha1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/debug-sandbox/plugin-libraries/org/jetbrains/kotlin/kotlin-stdlib-jdk7/1.6.21/_remote.repositories" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/debug-sandbox/plugin-libraries/org/jetbrains/kotlin/kotlin-stdlib-jdk7/1.6.21/kotlin-stdlib-jdk7-1.6.21.pom" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/debug-sandbox/plugin-libraries/org/jetbrains/kotlin/kotlin-stdlib-jdk7/1.6.21/kotlin-stdlib-jdk7-1.6.21.pom.sha1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/debug-sandbox/plugin-libraries/org/jetbrains/kotlin/kotlin-stdlib-jdk8/1.5.30/_remote.repositories" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/debug-sandbox/plugin-libraries/org/jetbrains/kotlin/kotlin-stdlib-jdk8/1.5.30/kotlin-stdlib-jdk8-1.5.30.pom" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/debug-sandbox/plugin-libraries/org/jetbrains/kotlin/kotlin-stdlib-jdk8/1.5.30/kotlin-stdlib-jdk8-1.5.30.pom.sha1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/debug-sandbox/plugin-libraries/org/jetbrains/kotlin/kotlin-stdlib-jdk8/1.6.10/_remote.repositories" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/debug-sandbox/plugin-libraries/org/jetbrains/kotlin/kotlin-stdlib-jdk8/1.6.10/kotlin-stdlib-jdk8-1.6.10.pom" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/debug-sandbox/plugin-libraries/org/jetbrains/kotlin/kotlin-stdlib-jdk8/1.6.10/kotlin-stdlib-jdk8-1.6.10.pom.sha1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/debug-sandbox/plugin-libraries/org/jetbrains/kotlin/kotlin-stdlib-jdk8/1.6.21/_remote.repositories" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/debug-sandbox/plugin-libraries/org/jetbrains/kotlin/kotlin-stdlib-jdk8/1.6.21/kotlin-stdlib-jdk8-1.6.21.pom" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/debug-sandbox/plugin-libraries/org/jetbrains/kotlin/kotlin-stdlib-jdk8/1.6.21/kotlin-stdlib-jdk8-1.6.21.pom.sha1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/debug-sandbox/plugin-libraries/org/jetbrains/kotlin/kotlin-stdlib/1.4.0/_remote.repositories" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/debug-sandbox/plugin-libraries/org/jetbrains/kotlin/kotlin-stdlib/1.4.0/kotlin-stdlib-1.4.0.pom" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/debug-sandbox/plugin-libraries/org/jetbrains/kotlin/kotlin-stdlib/1.4.0/kotlin-stdlib-1.4.0.pom.sha1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/debug-sandbox/plugin-libraries/org/jetbrains/kotlin/kotlin-stdlib/1.4.10/_remote.repositories" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/debug-sandbox/plugin-libraries/org/jetbrains/kotlin/kotlin-stdlib/1.4.10/kotlin-stdlib-1.4.10.pom" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/debug-sandbox/plugin-libraries/org/jetbrains/kotlin/kotlin-stdlib/1.4.10/kotlin-stdlib-1.4.10.pom.sha1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/debug-sandbox/plugin-libraries/org/jetbrains/kotlin/kotlin-stdlib/1.5.30/_remote.repositories" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/debug-sandbox/plugin-libraries/org/jetbrains/kotlin/kotlin-stdlib/1.5.30/kotlin-stdlib-1.5.30.pom" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/debug-sandbox/plugin-libraries/org/jetbrains/kotlin/kotlin-stdlib/1.5.30/kotlin-stdlib-1.5.30.pom.sha1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/debug-sandbox/plugin-libraries/org/jetbrains/kotlin/kotlin-stdlib/1.6.21/_remote.repositories" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/debug-sandbox/plugin-libraries/org/jetbrains/kotlin/kotlin-stdlib/1.6.21/kotlin-stdlib-1.6.21.pom" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/debug-sandbox/plugin-libraries/org/jetbrains/kotlin/kotlin-stdlib/1.6.21/kotlin-stdlib-1.6.21.pom.sha1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/debug-sandbox/plugin-libraries/org/jetbrains/kotlinx/atomicfu-jvm/0.17.1/_remote.repositories" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/debug-sandbox/plugin-libraries/org/jetbrains/kotlinx/atomicfu-jvm/0.17.1/atomicfu-jvm-0.17.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/debug-sandbox/plugin-libraries/org/jetbrains/kotlinx/atomicfu-jvm/0.17.1/atomicfu-jvm-0.17.1.jar.sha1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/debug-sandbox/plugin-libraries/org/jetbrains/kotlinx/atomicfu-jvm/0.17.1/atomicfu-jvm-0.17.1.pom" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/debug-sandbox/plugin-libraries/org/jetbrains/kotlinx/atomicfu-jvm/0.17.1/atomicfu-jvm-0.17.1.pom.sha1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/debug-sandbox/plugin-libraries/org/jetbrains/kotlinx/atomicfu/0.17.1/_remote.repositories" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/debug-sandbox/plugin-libraries/org/jetbrains/kotlinx/atomicfu/0.17.1/atomicfu-0.17.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/debug-sandbox/plugin-libraries/org/jetbrains/kotlinx/atomicfu/0.17.1/atomicfu-0.17.1.jar.sha1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/debug-sandbox/plugin-libraries/org/jetbrains/kotlinx/atomicfu/0.17.1/atomicfu-0.17.1.pom" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/debug-sandbox/plugin-libraries/org/jetbrains/kotlinx/atomicfu/0.17.1/atomicfu-0.17.1.pom.sha1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/debug-sandbox/plugin-libraries/org/jetbrains/kotlinx/kotlinx-coroutines-core-jvm/1.5.2-native-mt/_remote.repositories" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/debug-sandbox/plugin-libraries/org/jetbrains/kotlinx/kotlinx-coroutines-core-jvm/1.5.2-native-mt/kotlinx-coroutines-core-jvm-1.5.2-native-mt.pom" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/debug-sandbox/plugin-libraries/org/jetbrains/kotlinx/kotlinx-coroutines-core-jvm/1.5.2-native-mt/kotlinx-coroutines-core-jvm-1.5.2-native-mt.pom.sha1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/debug-sandbox/plugin-libraries/org/jetbrains/kotlinx/kotlinx-coroutines-core/1.5.2-native-mt/_remote.repositories" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/debug-sandbox/plugin-libraries/org/jetbrains/kotlinx/kotlinx-coroutines-core/1.5.2-native-mt/kotlinx-coroutines-core-1.5.2-native-mt.pom" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/debug-sandbox/plugin-libraries/org/jetbrains/kotlinx/kotlinx-coroutines-core/1.5.2-native-mt/kotlinx-coroutines-core-1.5.2-native-mt.pom.sha1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/debug-sandbox/plugin-shared-libraries/libraries.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/debug-sandbox/plugins/bigame-dev.mirai2.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.3.3/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.3.3/checksums/checksums.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.3.3/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.3.3/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.3.3/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.3.3/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.3.3/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.3.3/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.3.3/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.3.3/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -26,12 +165,24 @@
             <expand>
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="Bigame" type="f1a62948:ProjectNode" />
+                <item name="bigame" type="f1a62948:ProjectNode" />
               </path>
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="Bigame" type="f1a62948:ProjectNode" />
+                <item name="bigame" type="f1a62948:ProjectNode" />
                 <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="bigame" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="build" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="bigame" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="mirai" type="c8890929:TasksNode$1" />
               </path>
             </expand>
             <select />
@@ -46,6 +197,9 @@
         <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
@@ -72,7 +226,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "E:/projects/Bigame",
+    "last_opened_file_path": "E:/qqbotprojects/Bigame",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -144,6 +298,7 @@
       <updated>1722937098700</updated>
       <workItem from="1722937099741" duration="140000" />
       <workItem from="1722937243452" duration="305000" />
+      <workItem from="1722994359335" duration="526000" />
     </task>
     <servers />
   </component>
@@ -161,7 +316,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="origin/master" />
+                        <option value="main" />
                       </list>
                     </value>
                   </entry>
@@ -172,5 +327,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="测试环境添加" />
+    <option name="LAST_COMMIT_MESSAGE" value="测试环境添加" />
   </component>
 </project>
