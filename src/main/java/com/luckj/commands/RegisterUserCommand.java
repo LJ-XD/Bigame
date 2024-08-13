@@ -21,11 +21,12 @@ public final class RegisterUserCommand extends JSimpleCommand {
 
     public RegisterUserCommand() {
         super(Bigame.INSTANCE, "ru");
+        setDescription("注册一个账号");
         this.userService = new UserServiceImpl();
     }
 
     @Handler
-    public void foo(CommandContext context, String name, Long id) {
+    public void foo(CommandContext context, @Name("名称") String name, @Name("QQ")Long id) {
         userService.registerUser(new User(id, name));
     }
 }

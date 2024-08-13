@@ -11,10 +11,6 @@ import java.io.Serializable;
  */
 public class User implements Serializable {
 
-    public static void main(String[] args) {
-        System.out.println("hello world");
-    }
-
     public User(Long id, String name) {
         this.id = id;
         this.name = name;
