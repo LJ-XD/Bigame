@@ -9,9 +9,10 @@ import java.util.Objects;
  * @date 2024/08/06
  */
 public class BigameConfig {
-    String dbUrl ="jdbc:mysql://localhost:3306/bi_game?useSSL=false&useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai&allowMultiQueries=true&allowPublicKeyRetrieval=true";
-    String dbUserName ="root";
-    String dbPassword ="123456";
+    private String dbUrl = "jdbc:mysql://localhost:3306/bi_game?useSSL=false&useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai&allowMultiQueries=true&allowPublicKeyRetrieval=true";
+    private String dbUserName = "root";
+    private String dbPassword = "123456";
+    private String master="";
 
     public BigameConfig(String dbUrl, String dbUserName, String dbPassword) {
         this.dbUrl = dbUrl;
@@ -46,29 +47,34 @@ public class BigameConfig {
         this.dbPassword = dbPassword;
     }
 
-    @Override
-    public String toString() {
-        return "BigameConfig{" +
-                "dbUrl='" + dbUrl + '\'' +
-                ", dbUser='" + dbUserName + '\'' +
-                ", dbPassword='" + dbPassword + '\'' +
-                '}';
+    public String getMaster() {
+        return master;
+    }
+
+    public void setMaster(String master) {
+        this.master = master;
     }
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) {
-            return true;
-        }
-        if (o == null || getClass() != o.getClass()) {
-            return false;
-        }
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
         BigameConfig that = (BigameConfig) o;
-        return Objects.equals(dbUrl, that.dbUrl) && Objects.equals(dbUserName, that.dbUserName) && Objects.equals(dbPassword, that.dbPassword);
+        return dbUrl.equals(that.dbUrl) && dbUserName.equals(that.dbUserName) && dbPassword.equals(that.dbPassword) && master.equals(that.master);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(dbUrl, dbUserName, dbPassword);
+        return Objects.hash(dbUrl, dbUserName, dbPassword, master);
+    }
+
+    @Override
+    public String toString() {
+        return "BigameConfig{" +
+                "dbUrl='" + dbUrl + '\'' +
+                ", dbUserName='" + dbUserName + '\'' +
+                ", dbPassword='" + dbPassword + '\'' +
+                ", master='" + master + '\'' +
+                '}';
     }
 }

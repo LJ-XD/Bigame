@@ -1,9 +1,13 @@
 package com.luckj;
 
 import com.luckj.commands.RegisterUserCommand;
+import com.luckj.constants.BaseGameConstants;
 import com.luckj.constants.BotOrderConstants;
 import com.luckj.entity.User;
+import com.luckj.mybatis.MyBatisLoader;
+import com.luckj.service.AIService;
 import com.luckj.service.UserService;
+import com.luckj.service.impl.AIServiceImpl;
 import com.luckj.service.impl.UserServiceImpl;
 import net.mamoe.mirai.console.command.CommandManager;
 import net.mamoe.mirai.console.plugin.jvm.JavaPlugin;
@@ -15,10 +19,15 @@ import net.mamoe.mirai.event.GlobalEventChannel;
 import net.mamoe.mirai.event.events.FriendMessageEvent;
 import net.mamoe.mirai.event.events.GroupMessageEvent;
 import net.mamoe.mirai.message.data.MessageChain;
+import net.mamoe.mirai.message.data.MessageChainBuilder;
+import net.mamoe.mirai.message.data.QuoteReply;
 import net.mamoe.mirai.utils.MiraiLogger;
 
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.HashMap;
+import java.util.Map;
+
 
 /**
  * Bigame插件启动类
@@ -30,7 +39,11 @@ public final class Bigame extends JavaPlugin {
 
     public static final Bigame INSTANCE = new Bigame();
 
+//    private static Map<Integer, Object> gameBeginMap=new HashMap<>();
+
     private final UserService userService;
+    private final AIService aiService;
+
     public final MiraiLogger miraiLogger;
 
 
@@ -41,6 +54,7 @@ public final class Bigame extends JavaPlugin {
                 .build());
         this.userService = new UserServiceImpl();
         this.miraiLogger = getLogger();
+        this.aiService = new AIServiceImpl();
     }
 
     @Override
@@ -65,6 +79,17 @@ public final class Bigame extends JavaPlugin {
                 user.setName(sender.getNick());
                 message = userService.registerUser(user);
                 event.getSubject().sendMessage(message); // 回复消息
+            }
+            if (s.startsWith(BaseGameConstants.BotConstants.NAME)) {
+                String question = aiService.question(s);
+                MessageChain chainQuote = new MessageChainBuilder()
+                        .append(new QuoteReply(event.getMessage()))
+                        .append(question)
+                        .build();
+                event.getSubject().sendMessage(chainQuote);
+            }
+            if (s.startsWith(BaseGameConstants.BotConstants.COMMAND)&&String.valueOf(sender.getId()).equals(MyBatisLoader.bigameConfig.getMaster())) {
+                event.getSubject().sendMessage(s.replace(BaseGameConstants.BotConstants.COMMAND, ""));
             }
         });
         eventChannel.subscribeAlways(FriendMessageEvent.class, event -> {

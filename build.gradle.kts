@@ -29,5 +29,6 @@ dependencies {
     implementation("cn.hutool:hutool-all:5.8.25")
     implementation("com.alibaba:fastjson:2.0.0")
     implementation("org.projectlombok:lombok:1.18.24")
+    implementation ("com.alibaba" ,"dashscope-sdk-java",  "2.16.2")
     testImplementation("junit:junit:4.13.1")
 }

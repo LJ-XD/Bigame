@@ -37,13 +37,12 @@ import java.util.Objects;
 public class MyBatisLoader {
     private static SqlSessionFactory sqlSessionFactory;
     private static final MiraiLogger MIRAI_LOGGER = MiraiLogger.Factory.INSTANCE.create(MyBatisLoader.class);
-
+    public static BigameConfig bigameConfig = new BigameConfig();
     static {
         try {
             String configUrl = "config/com.luckj.bigame/bigame.yml";
-            BigameConfig bigameConfig = new BigameConfig();
             try {
-                checkConfigFile(configUrl, BotConfigConstants.BIGAME_YML);
+                checkConfigFile(configUrl);
                 JSONObject jsonObject = YmlUtils.loadYamlAsJsonObject(configUrl);
                 bigameConfig = JSON.toJavaObject(jsonObject, BigameConfig.class);
                 MIRAI_LOGGER.info("======获取配置文件成功=====");
@@ -58,7 +57,7 @@ public class MyBatisLoader {
 
     }
 
-    private static void checkConfigFile(String url, String content) {
+    private static void checkConfigFile(String url) {
         File configFile = new File(url);
         if (!configFile.exists()) {
             MIRAI_LOGGER.error("======找不到配置文件,开始创建=====");
@@ -67,8 +66,8 @@ public class MyBatisLoader {
                 boolean fileCreated = configFile.createNewFile();
                 if (directoryCreated || fileCreated) {
                     MIRAI_LOGGER.info("======配置文件创建成功=====");
-                    if (Objects.nonNull(content) && StringUtils.isNotBlank(content)) {
-                        writeContentToFile(configFile, content);
+                    if (StringUtils.isNotBlank(BotConfigConstants.BIGAME_YML)) {
+                        writeContentToFile(configFile, BotConfigConstants.BIGAME_YML);
                     }
                 } else {
                     MIRAI_LOGGER.error("======配置文件创建失败=====");
