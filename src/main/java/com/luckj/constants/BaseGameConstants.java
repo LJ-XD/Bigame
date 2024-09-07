@@ -1,5 +1,7 @@
 package com.luckj.constants;
 
+import com.luckj.config.BigameConfig;
+
 public interface BaseGameConstants {
 
     interface UserConstants {
@@ -13,6 +15,6 @@ public interface BaseGameConstants {
         String BIGGER = "米若猜大了!";
         String SMALLER = "米若猜小了!";
         String WIN = "恭喜米若猜对了!";
-        String COMMAND="@";
+        String COMMAND = "@" + BigameConfig.getInstance().getMaster();
     }
 }

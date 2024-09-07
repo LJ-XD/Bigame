@@ -16,10 +16,7 @@ import java.util.Map;
  * @date 2024/08/06
  */
 public class YmlUtils {
-    public static JSONObject loadYamlAsJsonObject(String filePath) throws IOException {
-        Yaml yaml = new Yaml();
-        Map<String, Object> map = yaml.load(Files.newInputStream(Paths.get(filePath)));
-        String jsonString = JSON.toJSONString(map);
-        return JSON.parseObject(jsonString);
+    public static Map<String, Object> loadYamlAsJsonObject(String filePath) throws IOException {
+        return new Yaml().load(Files.newInputStream(Paths.get(filePath)));
     }
 }

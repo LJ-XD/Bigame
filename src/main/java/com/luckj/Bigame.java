@@ -1,10 +1,10 @@
 package com.luckj;
 
 import com.luckj.commands.RegisterUserCommand;
+import com.luckj.config.BigameConfig;
 import com.luckj.constants.BaseGameConstants;
 import com.luckj.constants.BotOrderConstants;
 import com.luckj.entity.User;
-import com.luckj.mybatis.MyBatisLoader;
 import com.luckj.service.AIService;
 import com.luckj.service.UserService;
 import com.luckj.service.impl.AIServiceImpl;
@@ -25,8 +25,6 @@ import net.mamoe.mirai.utils.MiraiLogger;
 
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.HashMap;
-import java.util.Map;
 
 
 /**
@@ -60,6 +58,7 @@ public final class Bigame extends JavaPlugin {
     @Override
     public void onEnable() {
         userService.welcomeUser();
+        BigameConfig config = BigameConfig.getInstance();
         CommandManager.INSTANCE.registerCommand(new RegisterUserCommand(), true);
         Path currentRelativePath = Paths.get("");
         Path currentAbsoluteDirectory = currentRelativePath.toAbsolutePath();
@@ -88,7 +87,7 @@ public final class Bigame extends JavaPlugin {
                         .build();
                 event.getSubject().sendMessage(chainQuote);
             }
-            if (s.startsWith(BaseGameConstants.BotConstants.COMMAND)&&String.valueOf(sender.getId()).equals(MyBatisLoader.bigameConfig.getMaster())) {
+            if (s.startsWith(BaseGameConstants.BotConstants.COMMAND)&&String.valueOf(sender.getId()).equals(config.getMaster())) {
                 event.getSubject().sendMessage(s.replace(BaseGameConstants.BotConstants.COMMAND, ""));
             }
         });

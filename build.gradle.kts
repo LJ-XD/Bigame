@@ -17,7 +17,7 @@ repositories {
 }
 dependencies {
     // 添加 MySQL JDBC 驱动
-    implementation("mysql:mysql-connector-java:8.0.32")
+    implementation("com.mysql:mysql-connector-j:8.3.0")
 
     //Mybatis
     implementation("org.mybatis:mybatis:3.5.13")
@@ -27,8 +27,9 @@ dependencies {
     implementation("org.apache.commons:commons-lang3:3.12.0")
     implementation("org.yaml:snakeyaml:2.0")
     implementation("cn.hutool:hutool-all:5.8.25")
-    implementation("com.alibaba:fastjson:2.0.0")
-    implementation("org.projectlombok:lombok:1.18.24")
+    implementation("com.alibaba:fastjson:2.0.52")
+    implementation("org.projectlombok:lombok:1.18.30")
+    annotationProcessor("org.projectlombok:lombok:1.18.30")
     implementation ("com.alibaba" ,"dashscope-sdk-java",  "2.16.2")
     testImplementation("junit:junit:4.13.1")
 }

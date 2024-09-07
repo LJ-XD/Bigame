@@ -13,13 +13,16 @@ import com.alibaba.dashscope.exception.ApiException;
 import com.alibaba.dashscope.exception.InputRequiredException;
 import com.alibaba.dashscope.exception.NoApiKeyException;
 import com.luckj.Bigame;
+import com.luckj.config.BigameConfig;
 import net.mamoe.mirai.utils.MiraiLogger;
 
 import java.util.Arrays;
 
 public class AliAiUtil {
     private final static MiraiLogger miraiLogger = MiraiLogger.Factory.INSTANCE.create(Bigame.class);
+
     public static GenerationResult callWithMessage(String question) throws ApiException, NoApiKeyException, InputRequiredException {
+        String aiApiKey = BigameConfig.getInstance().getAiApiKey();
         Generation gen = new Generation();
 
         Message systemMsg = Message.builder()
@@ -40,6 +43,7 @@ public class AliAiUtil {
                 .temperature(0.8f)
                 .topP(0.8)
                 .seed(1234)
+                .apiKey(aiApiKey)
                 .build();
 
         return gen.call(param);
@@ -55,7 +59,4 @@ public class AliAiUtil {
             return "网络有点波动,请用力拍一拍你的手机,可能会好一点(";
         }
     }
-
-
-
 }
