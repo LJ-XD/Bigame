@@ -15,6 +15,9 @@ public interface BaseGameConstants {
         String BIGGER = "米若猜大了!";
         String SMALLER = "米若猜小了!";
         String WIN = "恭喜米若猜对了!";
-        String COMMAND = "@" + BigameConfig.getInstance().getMaster();
+        String AT_BOT_QQ = "@" + BigameConfig.getInstance().getBotQQ();
+        String REPEAT = "/复读";
+        String DRAW ="/画画";
+        String MO_YU="/摸鱼";
     }
 }

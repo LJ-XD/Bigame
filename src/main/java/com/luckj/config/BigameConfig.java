@@ -31,6 +31,7 @@ public class BigameConfig {
     private String dbPassword = "123456";
     private String master;
     private String aiApiKey;
+    private String botQQ;
 
 
     public BigameConfig() {
