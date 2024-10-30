@@ -3,8 +3,11 @@ package com.luckj.service.impl;
 import cn.hutool.core.util.StrUtil;
 import com.alibaba.fastjson2.JSON;
 import com.alibaba.fastjson2.JSONObject;
+import com.luckj.config.BigameConfig;
+import com.luckj.enums.AiTypeNum;
 import com.luckj.service.AIService;
 import com.luckj.utils.AliAiUtil;
+import com.luckj.utils.WenXinAiUtil;
 import net.mamoe.mirai.contact.Contact;
 import net.mamoe.mirai.message.data.Image;
 import net.mamoe.mirai.utils.ExternalResource;
@@ -28,21 +31,28 @@ public class AIServiceImpl implements AIService {
 
 
     @Override
-    public String question(String s) {
-        return AliAiUtil.aiQuestion(s);
+    public String question(String s, int type) {
+        if (type == AiTypeNum.WEN_XIN_AI.getCode()) {
+            return WenXinAiUtil.questionByIam(s);
+        } else if (type == AiTypeNum.ALI_AI.getCode()) {
+            return AliAiUtil.aiQuestion(s);
+        } else {
+            return "模型出问题了快找人来看看吧\uD83D\uDE35";
+        }
     }
 
     @Override
     public Image generatePicture(Contact contact, String prompt) {
         boolean containsChinese = StrUtil.containsAny(prompt, "一", "龥");
         if (containsChinese) {
-            return null;
+            prompt = WenXinAiUtil.translators(prompt);
         }
         String imageUrl = AliAiUtil.generatePicture(prompt);
         File file = new File(SAVE_DIRECTORY + "/" + imageUrl);
         return ExternalResource.uploadAsImage(file, contact);
 
     }
+
     @Override
     public Image moYu(Contact contact) {
         try {
@@ -71,3 +81,4 @@ public class AIServiceImpl implements AIService {
         return null;
     }
 }
+

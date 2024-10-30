@@ -69,7 +69,7 @@ public class AliAiUtil {
             Message message = result.getOutput().getChoices().get(0).getMessage();
             return message.getContent();
         } catch (ApiException | NoApiKeyException | InputRequiredException e) {
-//            miraiLogger.error("ai回答失败", e);
+            miraiLogger.error("ai回答失败", e);
             return "网络有点波动,请用力拍一拍你的手机,可能会好一点(";
         }
     }

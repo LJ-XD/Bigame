@@ -40,6 +40,10 @@ public interface BotConfigConstants {
             "dbPassword: 123456\n"+
             "master: \n"+
             "aiApiKey: \n"+
-            "botQQ: \n"
+            "botQQ: \n"+
+            "wen_xin_ak: \n"+
+            "wen_xin_sk: \n"+
+            "wen_xin_iam_ak: \n"+
+            "wen_xin_iam_sk: \n"
             ;
 }

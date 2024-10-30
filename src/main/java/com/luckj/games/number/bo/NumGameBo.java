@@ -1,6 +1,6 @@
 package com.luckj.games.number.bo;
 
-import com.luckj.constants.BaseGameConstants;
+import com.luckj.constants.BotBaseConstants;
 import lombok.Data;
 
 @Data
@@ -20,7 +20,7 @@ public class NumGameBo {
     /**
      * 另一个玩家名称/机器人名称
      */
-    private String botName= BaseGameConstants.BotConstants.NAME;
+    private String botName= BotBaseConstants.BotConstants.NAME;
 
     public int getGoalNum() {
         return goalNum;

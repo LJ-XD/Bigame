@@ -3,6 +3,7 @@ package com.luckj.commands;
 import com.luckj.Bigame;
 import net.mamoe.mirai.console.command.CommandSender;
 import net.mamoe.mirai.console.command.java.JRawCommand;
+import net.mamoe.mirai.console.permission.Permission;
 import net.mamoe.mirai.message.data.MessageChain;
 import org.jetbrains.annotations.NotNull;
 
@@ -24,6 +25,7 @@ public final class BigameCommand extends JRawCommand {
         setDescription("这是一个测试指令");
         // 设置指令前缀是可选的，即使用 `test` 也能执行指令而不需要 `/test`
         setPrefixOptional(true);
+        setPermission(Permission.getRootPermission());
     }
 
     @Override

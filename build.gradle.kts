@@ -29,6 +29,7 @@ dependencies {
     implementation("cn.hutool:hutool-all:5.8.25")
     implementation("com.alibaba:fastjson:2.0.52")
     implementation("org.projectlombok:lombok:1.18.30")
+    implementation("com.baidubce:qianfan:0.1.1")
     annotationProcessor("org.projectlombok:lombok:1.18.30")
     implementation ("com.alibaba" ,"dashscope-sdk-java",  "2.16.2")
     testImplementation("junit:junit:4.13.1")

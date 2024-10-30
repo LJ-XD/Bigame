@@ -24,7 +24,7 @@ import java.util.Objects;
 public class BigameConfig {
 
     private static final MiraiLogger MIRAI_LOGGER = MiraiLogger.Factory.INSTANCE.create(BigameConfig.class);
-    private static BigameConfig bigameConfig;
+    private static BigameConfig bigameConfig; 
 
     private String dbUrl = "jdbc:mysql://localhost:3306/bi_game?useSSL=false&useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai&allowMultiQueries=true&allowPublicKeyRetrieval=true";
     private String dbUserName = "root";
@@ -32,6 +32,10 @@ public class BigameConfig {
     private String master;
     private String aiApiKey;
     private String botQQ;
+    private String wen_xin_ak;
+    private String wen_xin_sk;
+    private String wen_xin_iam_ak;
+    private String wen_xin_iam_sk;
 
 
     public BigameConfig() {
