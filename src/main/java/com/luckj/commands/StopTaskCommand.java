@@ -4,9 +4,6 @@ import com.luckj.Bigame;
 import com.luckj.task.DailyMessageScheduler;
 import net.mamoe.mirai.console.command.CommandContext;
 import net.mamoe.mirai.console.command.java.JSimpleCommand;
-import net.mamoe.mirai.utils.MiraiLogger;
-
-import java.time.LocalTime;
 
 /**
  * 关闭定时任务指令

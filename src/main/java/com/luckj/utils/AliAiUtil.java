@@ -1,10 +1,5 @@
 package com.luckj.utils;
 
-// Refer to the document for workspace information: https://help.aliyun.com/document_detail/2746874.html
-
-// Copyright (c) Alibaba, Inc. and its affiliates.
-
-import cn.hutool.http.HttpUtil;
 import com.alibaba.dashscope.aigc.generation.Generation;
 import com.alibaba.dashscope.aigc.generation.GenerationParam;
 import com.alibaba.dashscope.aigc.generation.GenerationResult;
@@ -16,8 +11,8 @@ import com.alibaba.dashscope.common.Role;
 import com.alibaba.dashscope.exception.ApiException;
 import com.alibaba.dashscope.exception.InputRequiredException;
 import com.alibaba.dashscope.exception.NoApiKeyException;
-import com.luckj.Bigame;
 import com.luckj.config.BigameConfig;
+import com.luckj.constants.BotBaseConstants;
 import net.mamoe.mirai.utils.MiraiLogger;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
@@ -31,10 +26,10 @@ import java.nio.file.Paths;
 import java.util.Arrays;
 import java.util.Map;
 
+
 public class AliAiUtil {
-    private final static MiraiLogger miraiLogger = MiraiLogger.Factory.INSTANCE.create(Bigame.class);
-    public static final String SAVE_DIRECTORY = "data/com.luckj.bigame/images";
-    private static String aiApiKey = BigameConfig.getInstance().getAiApiKey();
+    private final static MiraiLogger miraiLogger = MiraiLogger.Factory.INSTANCE.create(AliAiUtil.class);
+    private static final String AI_API_KEY = BigameConfig.getInstance().getAiApiKey();
     private static final OkHttpClient CLIENT = new OkHttpClient();
 
     public static GenerationResult callWithMessage(String question) throws ApiException, NoApiKeyException, InputRequiredException {
@@ -58,7 +53,7 @@ public class AliAiUtil {
                 .temperature(0.8f)
                 .topP(0.8)
                 .seed(1234)
-                .apiKey(aiApiKey)
+                .apiKey(AI_API_KEY)
                 .build();
         return gen.call(param);
     }
@@ -82,7 +77,7 @@ public class AliAiUtil {
                     ImageSynthesisParam.builder()
                             .model("flux-merged")
                             .n(1)
-                            .apiKey(aiApiKey)
+                            .apiKey(AI_API_KEY)
                             .size("1024*1024")
                             .prompt(prompt)
                             .negativePrompt("garfield")
@@ -101,8 +96,8 @@ public class AliAiUtil {
                     if (!response.isSuccessful()) {
                         throw new IOException("Unexpected code " + response);
                     }
-                    YmlUtils.checkAndCreateDirectory(SAVE_DIRECTORY);
-                    Path file = Paths.get(SAVE_DIRECTORY + "/" + fileName);
+                    YmlUtils.checkAndCreateDirectory(BotBaseConstants.BotConfigConstants.SAVE_DIRECTORY);
+                    Path file = Paths.get(BotBaseConstants.BotConfigConstants.SAVE_DIRECTORY + "/" + fileName);
                     Files.write(file, response.body().bytes());
                 }
             }

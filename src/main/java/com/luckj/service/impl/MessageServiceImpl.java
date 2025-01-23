@@ -1,5 +1,6 @@
 package com.luckj.service.impl;
 
+import com.alibaba.fastjson.JSON;
 import com.baidubce.qianfan.core.builder.ChatBuilder;
 import com.luckj.config.BigameConfig;
 import com.luckj.constants.BotBaseConstants;
@@ -9,6 +10,7 @@ import com.luckj.service.AIService;
 import com.luckj.service.MessageService;
 import com.luckj.service.UserService;
 import com.luckj.task.DailyMessageScheduler;
+import com.luckj.utils.JsonUtils;
 import com.luckj.utils.WenXinAiUtil;
 import net.mamoe.mirai.contact.Group;
 import net.mamoe.mirai.contact.Member;
@@ -16,10 +18,13 @@ import net.mamoe.mirai.event.events.GroupMessageEvent;
 import net.mamoe.mirai.message.data.Image;
 import net.mamoe.mirai.message.data.MessageChainBuilder;
 import net.mamoe.mirai.message.data.QuoteReply;
+import net.mamoe.mirai.utils.MiraiLogger;
 import org.apache.commons.lang3.StringUtils;
 
+import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Random;
 
 public class MessageServiceImpl implements MessageService {
     private final UserService userService;
@@ -30,10 +35,13 @@ public class MessageServiceImpl implements MessageService {
     private static Integer AI_TYPE = 1;
     private final BigameConfig config = BigameConfig.getInstance();
 
+    private final static MiraiLogger miraiLogger = MiraiLogger.Factory.INSTANCE.create(MessageServiceImpl.class);
 
-    public MessageServiceImpl() {
-        this.aiService = new AIServiceImpl();
-        this.userService = new UserServiceImpl();
+    public static final MessageService INSTANCE = new MessageServiceImpl();
+
+    private MessageServiceImpl() {
+        this.aiService = AIServiceImpl.INSTANCE;
+        this.userService = UserServiceImpl.INSTANCE;
         this.dailyMessageScheduler = DailyMessageScheduler.getInstance();
     }
 
@@ -52,10 +60,6 @@ public class MessageServiceImpl implements MessageService {
         recover(event, question);
     }
 
-    @Override
-    public void moYu(GroupMessageEvent event, Group group) {
-        event.getSubject().sendMessage(aiService.moYu(group));
-    }
 
     @Override
     public void generatePicture(GroupMessageEvent event, Group group, String message) {
@@ -128,17 +132,41 @@ public class MessageServiceImpl implements MessageService {
 
     @Override
     public void showCommand(GroupMessageEvent event) {
-        String commands = "现在支持的指令有:\n" +
-                BotBaseConstants.BotConstants.NAME + "(和米若聊天)" + "\n" +
-                BotBaseConstants.BotConstants.DRAW + "(让米若画画)" + "\n" +
-                BotBaseConstants.BotConstants.MO_YU + "(让米若发一个摸鱼图)" + "\n" +
-                BotBaseConstants.BotConstants.OPEN_Q_A + "(和米若开启多轮聊天,米若会记住你之前的问题 ps:单轮聊天不会记住之前的问题)" + "\n" +
+        String commands = "现在米若会的有:\n" +
+                BotBaseConstants.BotConstants.NAME + "(聊天,对话内容要以米若的名字开头哦)" + "\n" +
+                BotBaseConstants.BotConstants.DRAW + "(画画)" + "\n" +
+                BotBaseConstants.BotConstants.OPEN_Q_A + "(开启多轮聊天,米若会记住你之前的问题 ps:单轮聊天不会记住之前的问题)" + "\n" +
                 BotBaseConstants.BotConstants.CLOSE_Q_A + "(顾名思义)";
         sendMsg(event, commands);
     }
 
+    @Override
+    public void customizeAnswers(GroupMessageEvent event, String message) {
+        Map<String, Object> map = JsonUtils.loadMapFromJsonFile(BotBaseConstants.BotConfigConstants.SAVE_DOCUMENT);
+        Object messageMapObj = map.get(BotBaseConstants.BotMessageConstants.MESSAGE_DATA);
+        if (Objects.nonNull(messageMapObj)) {
+            try {
+                Map<String, List<String>> messageMap = JSON.parseObject(JSON.toJSONString(messageMapObj), Map.class);
+                List<String> messages = messageMap.get(message);
+                if (Objects.nonNull(messages)) {
+                    if (messages.size() > 1) {
+                        sendMsg(event, messages.get(new Random().nextInt(messages.size())));
+                    } else {
+                        sendMsg(event, messages.get(0));
+                    }
+                }
+            } catch (Exception e) {
+                miraiLogger.error("自定义问题回答异常:", e);
+            }
+        }
+    }
+
     private static void sendMsg(GroupMessageEvent event, String message) {
         event.getSubject().sendMessage(message);
+    }
+
+    private static void sendMsg(Member sender, String message) {
+        sender.sendMessage(message);
     }
 
     private static void recover(GroupMessageEvent event, String message) {

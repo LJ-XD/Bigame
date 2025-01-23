@@ -1,6 +1,5 @@
 package com.luckj.service.impl;
 
-import com.luckj.Bigame;
 import com.luckj.entity.User;
 import com.luckj.mapper.UserMapper;
 import com.luckj.mybatis.MyBatisLoader;
@@ -20,11 +19,12 @@ import java.util.List;
 public class UserServiceImpl implements UserService {
     private final SqlSessionFactory sqlSessionFactory;
 
-    public UserServiceImpl() {
+    public static final UserService INSTANCE = new UserServiceImpl();
+    private UserServiceImpl() {
         this.sqlSessionFactory = MyBatisLoader.getSqlSessionFactory();
     }
 
-    private final MiraiLogger miraiLogger = MiraiLogger.Factory.INSTANCE.create(Bigame.class);
+    private final MiraiLogger miraiLogger = MiraiLogger.Factory.INSTANCE.create(UserServiceImpl.class);
 
     @Override
     public void welcomeUser() {

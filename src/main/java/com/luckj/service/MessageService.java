@@ -13,8 +13,6 @@ public interface MessageService {
 
     void question(GroupMessageEvent event, String message);
 
-    void moYu(GroupMessageEvent event, Group group);
-
     void generatePicture(GroupMessageEvent event, Group group, String message);
 
     void repeat(GroupMessageEvent event, Member sender, String message);
@@ -28,4 +26,6 @@ public interface MessageService {
     void multiQuestionByIam(GroupMessageEvent event,Member sender, ChatBuilder chatBuilder, String message, Map<Long, ChatBuilder> qaMap);
 
     void showCommand(GroupMessageEvent event);
+
+    void customizeAnswers(GroupMessageEvent event, String message);
 }

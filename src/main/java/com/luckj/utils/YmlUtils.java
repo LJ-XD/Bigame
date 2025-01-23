@@ -28,9 +28,7 @@ public class YmlUtils {
         Path path = Paths.get(directoryPath);
         try {
             // 检查路径是否存在
-            if (Files.exists(path)) {
-                System.out.println("目录已存在: " + directoryPath);
-            } else {
+            if (!Files.exists(path)) {
                 // 创建目录
                 Files.createDirectories(path);
                 System.out.println("目录已创建: " + directoryPath);

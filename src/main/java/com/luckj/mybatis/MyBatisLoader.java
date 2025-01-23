@@ -19,26 +19,20 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.Collection;
 
-/**
- * Batis Util
- *
- * @author lj
- * @date 2024/08/05
- */
 public class MyBatisLoader {
     private static SqlSessionFactory sqlSessionFactory;
     private static final MiraiLogger MIRAI_LOGGER = MiraiLogger.Factory.INSTANCE.create(MyBatisLoader.class);
 
-
     static {
         try {
             BigameConfig bigameConfig = BigameConfig.getInstance();
-            sqlSessionFactory = getSqlSessionFactory(bigameConfig.getDbUrl(), bigameConfig.getDbUserName(), bigameConfig.getDbPassword());
-            MIRAI_LOGGER.info("======sqlSessionFactory创建成功=====");
+            if (bigameConfig.getDbType()!= null&& "mysql".equals(bigameConfig.getDbType())){
+                sqlSessionFactory = getSqlSessionFactory(bigameConfig.getDbUrl(), bigameConfig.getDbUserName(), bigameConfig.getDbPassword());
+                MIRAI_LOGGER.info("======sqlSessionFactory创建成功=====");
+            }
         } catch (Exception e) {
             MIRAI_LOGGER.error("======获取配置文件失败=====", e);
         }
-
     }
 
     public static SqlSessionFactory getSqlSessionFactory() {

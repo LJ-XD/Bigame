@@ -29,6 +29,7 @@ public class BigameConfig {
     private String dbUrl = "jdbc:mysql://localhost:3306/bi_game?useSSL=false&useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai&allowMultiQueries=true&allowPublicKeyRetrieval=true";
     private String dbUserName = "root";
     private String dbPassword = "123456";
+    private String dbType;
     private String master;
     private String aiApiKey;
     private String botQQ;
@@ -64,9 +65,9 @@ public class BigameConfig {
                 boolean directoryCreated = configFile.getParentFile().mkdirs();
                 boolean fileCreated = configFile.createNewFile();
                 if (directoryCreated || fileCreated) {
-                    MIRAI_LOGGER.info("======配置文件创建成功=====");
                     if (StringUtils.isNotBlank(BotConfigConstants.BIGAME_YML)) {
                         writeContentToFile(configFile, BotConfigConstants.BIGAME_YML);
+                        MIRAI_LOGGER.info("======配置文件创建成功=====");
                     }
                 } else {
                     MIRAI_LOGGER.error("======配置文件创建失败=====");

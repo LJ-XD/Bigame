@@ -7,6 +7,4 @@ public interface AIService {
     String question(String s, int type);
 
     Image generatePicture(Contact contact, String prompt);
-
-    Image moYu(Contact contact);
 }

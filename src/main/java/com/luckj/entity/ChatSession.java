@@ -14,4 +14,8 @@ public class ChatSession {
     private int penalty_score = 1;
     private boolean collapsed = true;
     private String system= BotBaseConstants.BotConstants.ROLE_SETTING;
+
+    public static void main(String[] args) {
+        System.out.println(1111);
+    }
 }
